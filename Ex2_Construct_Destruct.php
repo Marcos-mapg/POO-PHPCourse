@@ -16,7 +16,6 @@ class Lottery{
     public function raffle(){
         $minimum = 0 ;
         $maximum = $this->number*2 ;
-        echo "HOLA";
         for($i =0; $i<$this->attempts; $i++){
             $attempt = rand($minimum,$maximum);  
             $this->attempt($attempt, $this->n_attempt);
@@ -37,9 +36,9 @@ class Lottery{
 
     public function __destruct(){
         if($this->result){
-            echo "FELICIDADES A GANADO: " ;
+            echo "Congratulations you have win: " ;
         }else{
-            echo "Lo lamentamos ha perdido ";
+            echo "Sorry you have lose ";
         }
     }
     
